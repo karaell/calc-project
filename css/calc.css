@@ -42,7 +42,6 @@ body {
     background-color: #2E2F38;
     font-size: 32px;
     color: #FFFFFF;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,12 +50,18 @@ body {
 .calc__btn--clear {
     width: 153px;
     height: 72px;
-    background-color: #4E505F;
-
 }
 
-.calc__btn--operator {
+.calc__btn:hover {
+    background-color: #4E505F;
+}
+
+.calc__btn--operator, .calc__btn--equal {
     background-color: #4B5EFC;  
+}
+
+.calc__btn--operator:hover, .calc__btn--equal:hover {
+    background-color: #6372f8;  
 }
 
 .calc__btn--zero {
