@@ -3,19 +3,20 @@ let a = null;
 let b = null;
 let operator = null;
 let selectedOperator = null;
+
 let btnClear = document.getElementById("clear");
 let btnDelete = document.getElementById("deletenum");
 let btnNumber = document.querySelectorAll(".calc__btn--number");
 let btnOperator = document.querySelectorAll(".calc__btn--operator");
 let btnEqual = document.getElementById("equal");
 
-function clearDisplay() {
+function clearResult() {
   result.innerHTML = 0;
   a = null;
   b = null;
   operator = null;
 }
-btnClear.addEventListener('click', clearDisplay)
+btnClear.addEventListener('click', clearResult)
 
 function deleteNumber() {
 	let resultLength = result.innerHTML.length;
@@ -38,7 +39,6 @@ for (let number of btnNumber) {
 
 for (let op of btnOperator) {
   op.onclick = function() {
-    
     operator = op.id;
     
     switch (operator) {
@@ -87,18 +87,14 @@ function calc(a, b, operator) {
       } else {
         return a / b;
       }
-      break;
 
     case "mult":
       return a * b;
-      break;
 
     case "sub":
       return a - b;
-      break;
 
     case "sum":
       return +a + +b;
-      break;
   }
 }
